@@ -1,6 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext";
-import { LoginPage } from "../pages";
+import { MainLayout } from "../layouts/MainLayout";
+import { HomePage, LoginPage } from "../pages";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 export function AppRoutes() {
   return (
@@ -10,7 +12,17 @@ export function AppRoutes() {
           {/* Rota pública */}
           <Route path="/login" element={<LoginPage />} />
 
-          {/* Aqui entrarão as rotas privadas */}
+          {/* Rotas protegidas */}
+          <Route
+            path="/app"
+            element={
+              <ProtectedRoute>
+                <MainLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<HomePage />} />
+          </Route>
 
           {/* Redirecionamento padrão */}
           <Route path="*" element={<Navigate to="/login" replace />} />
