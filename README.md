@@ -64,3 +64,13 @@ src/
 ├── App.tsx                  # Componente raiz
 └── main.tsx                 # Ponto de entrada
 ```
+
+### Padrões de projeto adotados
+
+- **Repository Pattern** — abstrai o acesso a dados por meio de interfaces no domínio.
+- **Adapter Pattern** — `LocalStorageAdapter` encapsula o `localStorage` com API assíncrona genérica.
+- **Service Layer** — centraliza a lógica de negócio fora da camada de apresentação.
+- **Context API + Custom Hook** — gerenciamento de estado global de autenticação.
+- **DTO Pattern** — objetos de transferência separados das entidades de domínio.
+
+---
