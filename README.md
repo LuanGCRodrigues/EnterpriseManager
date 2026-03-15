@@ -123,3 +123,9 @@ Após iniciar o servidor de desenvolvimento, acesse `http://localhost:5173` e fa
 | ------- | ------- |
 | Usuário | `admin` |
 | Senha   | `123`   |
+
+---
+
+### Link para o vídeo pitch
+
+https://youtu.be/kIo4YTX-qC8
