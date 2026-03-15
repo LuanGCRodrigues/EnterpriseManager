@@ -32,3 +32,35 @@ O **Enterprise Manager** é uma aplicação front-end que permite o cadastro, ed
 | Linting     | ESLint + typescript-eslint | 9 / 8  |
 
 ---
+
+## Estrutura do Projeto
+
+O código fonte está organizado em quatro camadas dentro de `src/`:
+
+```
+src/
+├── domain/                  # Camada de Domínio
+│   ├── entities/            #   Entidades (Enterprise, User) e tipos
+│   └── repositories/        #   Interfaces de repositório (contratos)
+│
+├── infrastructure/          # Camada de Infraestrutura
+│   ├── storage/             #   Adapter genérico para localStorage
+│   ├── repositories/        #   Implementações concretas dos repositórios
+│   └── seed.ts              #   Dados iniciais (admin + empreendimentos)
+│
+├── services/                # Camada de Serviços
+│   ├── auth/                #   Autenticação (login, logout, sessão)
+│   ├── enterprise/          #   Lógica de negócio de empreendimentos
+│   └── CryptoService.ts     #   Hash de senha e geração de UUID
+│
+├── presentation/            # Camada de Apresentação
+│   ├── components/          #   Componentes reutilizáveis (Button, Input, Modal, Select)
+│   ├── contexts/            #   Contexto de autenticação (AuthContext)
+│   ├── hooks/               #   Custom hooks (useAuth)
+│   ├── layouts/             #   Layout principal com sidebar responsiva
+│   ├── pages/               #   Páginas (Home, Login, Empreendimentos, Relatórios)
+│   └── routes/              #   Definição de rotas e proteção de rotas
+│
+├── App.tsx                  # Componente raiz
+└── main.tsx                 # Ponto de entrada
+```
