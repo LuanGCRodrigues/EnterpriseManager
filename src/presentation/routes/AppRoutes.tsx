@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext";
 import { MainLayout } from "../layouts/MainLayout";
-import { HomePage, LoginPage } from "../pages";
+import { EnterprisesPage, HomePage, LoginPage } from "../pages";
 import { ProtectedRoute } from "./ProtectedRoute";
 
 export function AppRoutes() {
@@ -22,6 +22,7 @@ export function AppRoutes() {
             }
           >
             <Route index element={<HomePage />} />
+            <Route path="empreendimentos" element={<EnterprisesPage />} />
           </Route>
 
           {/* Redirecionamento padrão */}
