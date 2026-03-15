@@ -179,11 +179,8 @@ export function EnterprisesPage() {
     <div className="space-y-6">
       {/* Header */}
       <div className="grid grid-col sm:grid-cols-2 lg:grid-cols-3 sm:items-center sm:justify-between gap-4">
-        <div className="col-span-1 lg:col-span-2">
-          <Search
-            size={18}
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted"
-          />
+        <div className="col-span-1 lg:col-span-2 relative">
+          <Search size={18} className="absolute m-3 text-text-muted" />
           <Input
             placeholder="Buscar por nome, cidade ou setor..."
             value={searchTerm}
