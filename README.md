@@ -74,3 +74,52 @@ src/
 - **DTO Pattern** — objetos de transferência separados das entidades de domínio.
 
 ---
+
+## Instruções para Execução
+
+### Pré-requisitos
+
+- **Node.js** ≥ 20.19.0
+- **npm** (incluído com o Node.js)
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
+cd StartupManager
+
+# Instale as dependências
+npm install
+```
+
+### Comandos disponíveis
+
+```bash
+# Servidor de desenvolvimento
+npm run dev
+
+# Build de produção
+npm run build
+
+# Preview do build de produção
+npm run preview
+
+# Executar testes
+npm test
+
+# Executar testes em modo watch
+npm run test:watch
+
+# Lint
+npm run lint
+```
+
+### Acesso
+
+Após iniciar o servidor de desenvolvimento, acesse `http://localhost:5173` e faça login com as credenciais padrão:
+
+| Campo   | Valor   |
+| ------- | ------- |
+| Usuário | `admin` |
+| Senha   | `123`   |
